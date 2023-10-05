@@ -1,0 +1,566 @@
+body {
+    background-color: #1b1614;
+    color: white;
+    font-family: publik, helvetica, arial, sans-serif;
+    margin: 0 5% 0 5%;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Lägger till detta för att centrera elementen horisontellt */
+    align-items: center; /* Lägger till detta för att centrera elementen vertikalt */
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: rgb(255, 255, 255);
+    position: relative;
+    
+}
+
+.nav-header a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 8px 2px;
+    letter-spacing: 0.5px;
+}
+
+.nav-header a:hover {
+    text-decoration: underline; /* Återställ understrykning vid hovring */
+}
+
+.nav-header li {
+    display: inline-block;
+    position: relative;
+    
+}
+
+
+.logo-size {
+    width: 95px;
+    padding: 10px;
+}
+
+.hidden-nav {
+    display: none;
+}
+
+.hidden-button {
+    display: none;
+    opacity: 0;
+}
+
+.top-article {
+    align-items: center;
+    display:inline-block;
+    background-color: rgb(33, 29, 27);
+}
+
+.nav-header .login-button-container {
+    order: 4;
+
+}
+/*
+.nav-header .login-button-container img {
+
+    
+}
+
+.nav-header .login-button-container button {
+
+}
+
+*/
+/*.nav-header .login-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; *//* Detta flyttar knapparna längst till höger *//*
+}
+*/
+/*.nav-header .login-button-container button {
+    margin-left: -43px; /* Lägger till lite utrymme mellan knapparna om så önskas */
+/*}*/
+
+.top-article {
+    display: flex;
+    align-items: center;
+    background-color: rgb(33, 29, 27);
+    padding: 10px;
+}
+
+.article-image {
+    max-width: 60%; /* Justera storleken på bilden efter ditt behov */
+    margin-right: 20px; /* Lägg till marginal mellan bilden och texten */
+}
+
+.article-info {
+    flex: 1; /* Tar upp all tillgänglig plats för att texten ska vara till höger om bilden */
+}
+.article-info h3:hover {
+    text-decoration: underline;
+}
+
+.article-link {
+    text-decoration: none;
+    color: white; 
+    display: flex;
+    align-items: center;
+}
+
+.below-top-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%; /* Ändra detta värde om du vill att det ska vara mindre än 100% av body */
+    overflow-x: auto;
+    
+}
+
+.below-top-article article {
+    margin-right: 9px; /* Justera detta värde enligt dina önskemål för mellanrum mellan artiklarna */
+    background-color: #211d1b;
+    height: 400px;
+    text-decoration: none;
+    color: white;
+    flex: 0 0 auto; 
+    max-width: 20%;
+
+}
+.below-top-article img {
+    width: 100%;
+}
+
+.below-top-article h3:hover {
+    text-decoration: underline;
+}
+
+.below-top-article span,
+.below-top-article h3,
+.below-top-article p {
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+.info-banner {
+    margin-top: 20px;
+    background-color: #291926;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.info-banner ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 800px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-banner li {
+    display: flex;
+    flex-direction: column; /* Placera texten ovanför ikonen */
+    align-items: center;
+    margin-right: 20px;
+}
+
+.info-banner li svg {
+    display: none; /* Göm ikonerna */
+}
+
+.info-banner button {
+    background-color: #fff;
+    color: #291926;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.tips-for-dig-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.tips-for-dig {
+    max-width: 100%; 
+}
+
+.tips-for-dig-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tips-for-dig-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.tips-for-dig-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.tips-for-dig-section article:hover {
+    transform: scale(1.01);
+}
+
+.tips-for-dig-section article p,
+.tips-for-dig-section article h3,
+.tips-for-dig-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.tips-for-dig-section article:hover p,
+.tips-for-dig-section article:hover h3,
+.tips-for-dig-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.fortsatt-titta-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.fortsatt-titta {
+    max-width: 100%; 
+}
+
+.fortsatt-titta-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fortsatt-titta-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.fortsatt-titta-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.fortsatt-titta-section article:hover {
+    transform: scale(1.01);
+}
+
+.fortsatt-titta-section article p,
+.fortsatt-titta-section article h3,
+.fortsatt-titta-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.fortsatt-titta-section article:hover p,
+.fortsatt-titta-section article:hover h3,
+.fortsatt-titta-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.populart-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.populart {
+    max-width: 100%; 
+}
+
+.populart-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.populart-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.populart-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.populart-section article:hover {
+    transform: scale(1.01);
+}
+
+.populart-section article p,
+.populart-section article h3,
+.populart-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.populart-section article:hover p,
+.populart-section article:hover h3,
+.populart-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.hostens-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.hostens {
+    max-width: 100%; 
+}
+
+.hostens-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hostens-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.hostens-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.hostens-section article:hover {
+    transform: scale(1.01);
+}
+
+.hostens-section article p,
+.hostens-section article h3,
+.hostens-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.hostens-section article:hover p,
+.hostens-section article:hover h3,
+.hostens-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.hostens-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.hostens {
+    max-width: 100%; 
+}
+
+.hostens-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hostens-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.hostens-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.hostens-section article:hover {
+    transform: scale(1.01);
+}
+
+.hostens-section article p,
+.hostens-section article h3,
+.hostens-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.hostens-section article:hover p,
+.hostens-section article:hover h3,
+.hostens-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.min-lista-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.min-lista {
+    max-width: 100%; 
+}
+
+.min-lista-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.min-lista-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.min-lista-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.min-lista-section article:hover {
+    transform: scale(1.01);
+}
+
+.min-lista-section article p,
+.min-lista-section article h3,
+.min-lista-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.min-lista-section article:hover p,
+.min-lista-section article:hover h3,
+.min-lista-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.inspiration-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.inspiration {
+    max-width: 100%; 
+}
+
+.inspiration-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.inspiration-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.inspiration-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.inspiration-section article:hover {
+    transform: scale(1.01);
+}
+
+.inspiration-section article p,
+.inspiration-section article h3,
+.inspiration-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.inspiration-section article:hover p,
+.inspiration-section article:hover h3,
+.inspiration-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
+
+/*----*/
+.nytt-pa-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.nytt-pa {
+    max-width: 100%; 
+}
+
+.nytt-pa-section article {
+    margin-right: 9px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.nytt-pa-section article img {
+    max-height: 100%; /* Så att bilden anpassar sig till sin förälders bredd */
+}
+
+.nytt-pa-section article svg {
+    width: 50px; /* Justera bredden på svg-cirkeln efter ditt behov */
+    height: 50px; /* Justera höjden på svg-cirkeln efter ditt behov */
+    margin-top: 10px; /* Justera detta värde för att centrera vertikalt */
+}
+
+.nytt-pa-section article:hover {
+    transform: scale(1.01);
+}
+
+.nytt-pa-section article p,
+.nytt-pa-section article h3,
+.nytt-pa-section article svg {
+    opacity: 0; /* p, h3 och svg är osynliga som standard */
+    transition: opacity 0.3s ease; /* Lägger till en övergångseffekt för smidig ändring av opacitet */
+}
+
+.nytt-pa-section article:hover p,
+.nytt-pa-section article:hover h3,
+.nytt-pa-section article:hover svg {
+    opacity: 1; /* När du hoverar över article-elementet blir p, h3 och svg synliga */
+}
